@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b; /* slate-800 */
+}
+::-webkit-scrollbar-thumb {
+  background: #b45309; /* amber-700 / wood color */
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #92400e; /* amber-800 */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Select element styling for dark mode */
+select option {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+/* Input placeholders for the nature theme */
+::placeholder {
+  color: rgba(241, 245, 249, 0.4);
+}
+::-ms-input-placeholder {
+  color: rgba(241, 245, 249, 0.4);
+}
