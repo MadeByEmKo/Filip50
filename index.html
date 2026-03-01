@@ -35,7 +35,7 @@
     </script>
     <style>
         .text-shadow-strong {
-            text-shadow: 2px 2px 12px rgba(0, 0, 0, 1);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
         #photo-modal {
             display: none;
@@ -95,7 +95,7 @@
 
     <nav class="fixed w-full z-50 bg-pine/90 backdrop-blur-md border-b border-white/5 h-20">
         <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-            <a href="#home" class="font-serif text-2xl font-bold tracking-widest text-sand">Filip<span class="text-golden">5.0</span></a>
+            <a href="#home" class="font-serif text-2xl font-bold tracking-widest text-sand">Filip<span class="text-golden">50</span></a>
             <div class="hidden md:flex space-x-8 items-center text-sm uppercase tracking-widest font-medium">
                 <a href="#home" class="hover:text-golden">Úvod</a>
                 <a href="#misto" class="hover:text-golden">Místo</a>
@@ -106,21 +106,17 @@
         </div>
     </nav>
 
-    <header id="home" class="relative h-screen w-full overflow-hidden">
+    <header id="home" class="relative min-h-screen flex flex-col justify-center items-center text-center">
         <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center z-0">
-            <div class="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-charcoal/70"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-charcoal/10 via-charcoal/20 to-charcoal/60"></div>
         </div>
-        
-        <div class="relative z-10 h-full w-full flex flex-col items-center px-4">
-            <div class="mt-32 text-center">
-                <h2 class="text-golden font-serif text-lg md:text-xl mb-4 uppercase tracking-[0.4em] drop-shadow-md text-shadow-strong">Zveme na deployment nové verze:</h2>
-                <h1 class="text-6xl md:text-9xl font-serif font-bold text-white drop-shadow-lg text-shadow-strong">Filip 5.0</h1>
-            </div>
-
-            <div class="mt-auto mb-16 text-center">
-                <h2 class="text-golden font-serif text-xl md:text-2xl mb-4 uppercase tracking-[0.2em] drop-shadow-md text-shadow-strong">Hardware trochu šediví, ale kód je stále v topu!</h2>
-                <p class="text-3xl md:text-5xl font-serif text-white drop-shadow-md text-shadow-strong">12. – 14. 6. 2026</p>
-            </div>
+        <div class="relative z-10 px-4">
+            <h2 class="text-golden font-serif text-xl mb-10 uppercase tracking-[0.4em] drop-shadow-md text-shadow-strong">Testovací fázi máme za sebou, tak vás zveme na deployment:</h2>
+            
+            <h1 class="text-6xl md:text-9xl font-serif font-bold text-white mb-32 drop-shadow-lg text-shadow-strong">Filip 5.0</h1>
+            
+            <h2 class="text-golden font-serif text-xl md:text-2xl mb-8 uppercase tracking-[0.2em] drop-shadow-md text-shadow-strong">Stabilní verze. Hardware šediví, ale kód je stále čitelný!</h2>
+            <p class="text-2xl md:text-4xl font-serif text-white mt-10 drop-shadow-md text-shadow-strong">12. – 14. 6. 2026</p>
         </div>
     </header>
 
@@ -128,7 +124,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 <div class="order-2 lg:order-1 relative group w-full">
-                    <div class="aspect-[3/2] rounded-sm overflow-hidden border border-white/10 relative shadow-2xl">
+                    <div class="aspect-[3/2] rounded-sm overflow-hidden glass-panel border border-white/10 relative shadow-2xl">
                         <iframe src="https://nakumburaku.cz/" class="w-[133%] h-[133%] border-none pointer-events-none" title="Web Na Kumburáku" style="transform: scale(0.75); transform-origin: 0 0;"></iframe>
                         <a href="https://nakumburaku.cz/" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20 bg-transparent hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                             <div class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
@@ -136,6 +132,7 @@
                             </div>
                         </a>
                     </div>
+                    <div class="absolute -bottom-2 -right-2 w-full h-full border-r border-b border-golden/20 -z-10 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform"></div>
                 </div>
                 <div class="order-1 lg:order-2 text-left">
                     <div class="flex items-center space-x-4 mb-6">
@@ -156,7 +153,7 @@
     <section id="info" class="py-24 bg-pine/30 relative z-10 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-serif font-bold text-white mb-4">Informace k víkendu</h2>
+                <h2 class="text-5xl font-serif font-bold text-white mb-4">Provozní manuál</h2>
                 <p class="text-golden uppercase tracking-[0.3em] text-sm">Vše, co potřebujete vědět</p>
             </div>
 
@@ -169,7 +166,7 @@
                     <div class="space-y-4 text-sand/80">
                         <p>Brány se otevírají v <span class="text-white font-semibold">pátek v 16:00</span>.</p>
                         <ul class="space-y-2 border-l border-golden/30 pl-4 my-6">
-                            <li><strong class="text-golden">Pátek:</strong> Příjezd, ubytování, wellness a večerní posezení.</li>
+                            <li><strong class="text-golden">Pátek:</strong> Příjezd, ubytování a wellness.</li>
                             <li><strong class="text-golden">Sobota:</strong> Hlavní party startuje v <span class="text-white">16:00</span>.</li>
                         </ul>
                     </div>
@@ -193,7 +190,7 @@
 
     <section id="galerie" class="py-24 bg-charcoal relative z-10">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-serif font-bold text-white mb-16">Filip, Fík, Fíla v průběhu času</h2>
+            <h2 class="text-5xl font-serif font-bold text-white mb-16">Filip v průběhu času</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div class="gallery-item" onclick="openModal('images/20230909_110710.jpg')"><img src="images/20230909_110710.jpg" loading="lazy"></div>
                 <div class="gallery-item" onclick="openModal('images/20231229_133309.jpg')"><img src="images/20231229_133309.jpg" loading="lazy"></div>
