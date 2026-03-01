@@ -41,3 +41,22 @@ select option {
 ::-ms-input-placeholder {
   color: rgba(241, 245, 249, 0.4);
 }
+
+/* Hero watermark "50" - large decorative background element */
+.hero-with-50 {
+  position: relative;
+}
+.hero-watermark-50 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(12rem, 35vw, 28rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+}

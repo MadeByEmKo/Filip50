@@ -34,8 +34,8 @@
                         serif: ['Playfair Display', 'serif']
                     },
                     backgroundImage: {
-                        'hero-pattern': "url('images/hero.jpg')",
-                        'nature-pattern': "url('images/priroda.jpg')"
+                        'hero-pattern': "url('images/20240812_121009.jpg')",
+                        'nature-pattern': "url('images/20240525_151505.jpg')"
                     }
                 }
             }
@@ -112,7 +112,7 @@
                     <a href="#galerie"
                         class="text-sm font-medium tracking-wide hover:text-wood transition-colors">Galerie</a>
                     <a href="#rsvp"
-                        class="bg-wood text-white border border-wood hover:bg-transparent hover:text-wood px-6 py-2 rounded-sm text-sm font-semibold uppercase tracking-widest transition-all duration-300">RSVP</a>
+                        class="bg-wood text-white border border-wood hover:bg-transparent hover:text-wood px-6 py-2 rounded-sm text-sm font-semibold uppercase tracking-widest transition-all duration-300">Registrace</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
@@ -136,14 +136,16 @@
                 <a href="#galerie"
                     class="mobile-link text-lg font-serif hover:text-wood transition-colors block py-2">Galerie</a>
                 <a href="#rsvp"
-                    class="mobile-link bg-wood text-white px-8 py-3 rounded-sm text-sm font-semibold uppercase tracking-widest mt-4">RSVP</a>
+                    class="mobile-link bg-wood text-white px-8 py-3 rounded-sm text-sm font-semibold uppercase tracking-widest mt-4">Registrace</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="relative min-h-screen flex flex-col justify-center items-center z-10 pt-20">
-        <!-- Hero Background Image (Expects hero.jpg in parent images dir) -->
+    <header id="home" class="relative min-h-screen flex flex-col justify-center items-center z-10 pt-20 hero-with-50">
+        <!-- CSS watermark "50" -->
+        <span class="hero-watermark-50" aria-hidden="true">50</span>
+        <!-- Hero Background Image -->
         <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat z-0">
             <!-- Overlay gradient: very dark green/charcoal at bottom to blend with next section -->
             <div class="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-pine/60 to-charcoal"></div>
@@ -151,11 +153,12 @@
 
         <div class="relative z-10 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center">
             <h2 class="text-wood font-serif text-lg sm:text-xl md:text-2xl mb-6 uppercase tracking-[0.4em] font-light">
-                Pánská romance v přírodě
+                Pozvánka na narozeniny
             </h2>
             <h1 class="text-5xl sm:text-7xl md:text-9xl font-serif font-bold text-white mb-8 drop-shadow-2xl">
                 Filipových 50
             </h1>
+            <p class="text-sand/80 font-serif text-lg sm:text-xl md:text-2xl mb-6 tracking-wider">Filip, Fíla, Fík, Fykusa, Fykus</p>
 
             <div class="flex items-center justify-center space-x-6 mb-12 w-full">
                 <div class="h-[1px] w-16 sm:w-32 bg-wood/60"></div>
@@ -197,7 +200,7 @@
                         class="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-sm overflow-hidden glass-panel relative z-10">
                         <!-- Fallback background color if image is missing -->
                         <div class="absolute inset-0 bg-slate mix-blend-multiply"></div>
-                        <img src="images/priroda.jpg" alt="Příroda kolem srubu"
+                        <img src="images/20240525_151505.jpg" alt="Příroda kolem srubu"
                             class="w-full h-full object-cover mix-blend-overlay opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out">
                     </div>
                     <!-- Decorative border frame offset -->
@@ -263,40 +266,104 @@
                 <div class="w-24 h-[1px] bg-wood/50"></div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-                <!-- Gallery items with placeholders, assuming these will be populated -->
-                <div class="group relative aspect-square overflow-hidden bg-charcoal">
-                    <img src="images/priroda.jpg"
-                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'800\'><rect width=\'100%\' height=\'100%\' fill=\'%23121614\'/></svg>'"
-                        alt="Galerie 1"
-                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
-                    <div
-                        class="absolute inset-0 border-2 border-transparent group-hover:border-wood/30 transition-colors duration-500 m-4 z-10 pointer-events-none">
-                    </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20230909_110710.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                 </div>
-                <div class="group relative aspect-square overflow-hidden bg-charcoal">
-                    <img src="images/hero.jpg"
-                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'800\'><rect width=\'100%\' height=\'100%\' fill=\'%23121614\'/></svg>'"
-                        alt="Galerie 2"
-                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
-                    <div
-                        class="absolute inset-0 border-2 border-transparent group-hover:border-wood/30 transition-colors duration-500 m-4 z-10 pointer-events-none">
-                    </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20231229_133309.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                 </div>
-                <div class="group relative aspect-square overflow-hidden bg-charcoal">
-                    <img src="images/priroda.jpg"
-                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'800\'><rect width=\'100%\' height=\'100%\' fill=\'%23121614\'/></svg>'"
-                        alt="Galerie 3"
-                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
-                    <div
-                        class="absolute inset-0 border-2 border-transparent group-hover:border-wood/30 transition-colors duration-500 m-4 z-10 pointer-events-none">
-                    </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/IMG_20240109_195723_854.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240119_120022.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240125_200307.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240204_135458.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240204_174553.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240428_142813.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240510_164751.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240511_112637.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240525_151505.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240610_143712.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240701_200029.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240701_203217.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240717_200754.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240812_121009.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240814_112442.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240818_112153.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20240824_144731.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20241129_193215.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20250207_104948.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20250321_201507.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/20250322_145328.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-sm bg-charcoal border border-white/5">
+                    <img src="images/IMG-20250906-WA0011.jpg" alt="Vzpomínky" loading="lazy"
+                        class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                 </div>
             </div>
-
-            <p class="text-center text-sm text-sand/40 mt-10 italic uppercase tracking-widest">
-                Realné fotografie vložte do složky eFko images
-            </p>
         </div>
     </section>
 
@@ -310,7 +377,7 @@
             <div class="text-center mb-16">
                 <span class="uppercase tracking-widest text-sm text-wood font-medium mb-4 block">Potvrzení Vaší
                     účasti</span>
-                <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-6 drop-shadow-lg">Účast na akci</h2>
+                <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-6 drop-shadow-lg">Registrace</h2>
                 <p class="text-sand/70 text-lg max-w-2xl mx-auto font-light">Kapacita srubu je omezená. Prosím, vyplňte
                     následující formulář co nejdříve, abychom pro vás mohli vše perfektně připravit.</p>
             </div>
@@ -396,7 +463,7 @@
                         </div>
                         <button type="submit"
                             class="w-full bg-wood text-white font-semibold py-4 px-8 rounded-none hover:bg-white hover:text-pine border border-transparent hover:border-white transition-all duration-500 uppercase tracking-[0.2em] transform active:scale-[0.98]">
-                            Odeslat rezervaci
+                            Registrace
                         </button>
                     </div>
                 </form>
