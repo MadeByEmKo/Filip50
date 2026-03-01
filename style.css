@@ -1,62 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer utilities {
-  .glass-panel {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
-  }
-}
-
-/* Custom Scrollbar for dark theme */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #1e293b; /* slate-800 */
-}
-::-webkit-scrollbar-thumb {
-  background: #b45309; /* amber-700 / wood color */
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #92400e; /* amber-800 */
+/* Zajištění, že se fotky v galerii nebudou ořezávat */
+.gallery-img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain; /* Toto zajistí, že uvidíte CELOU fotku */
+  background-color: rgba(0,0,0,0.2); /* Jemný podklad pro fotky s jiným poměrem stran */
+  cursor: pointer;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Styl pro zvětšenou fotku (Modal) */
+#photo-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
+  cursor: zoom-out;
 }
 
-/* Select element styling for dark mode */
-select option {
-  background-color: #1e293b;
-  color: #f1f5f9;
-}
-
-/* Input placeholders for the nature theme */
-::placeholder {
-  color: rgba(241, 245, 249, 0.4);
-}
-::-ms-input-placeholder {
-  color: rgba(241, 245, 249, 0.4);
-}
-
-/* Hero watermark "50" - large decorative background element */
-.hero-with-50 {
-  position: relative;
-}
-.hero-watermark-50 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(12rem, 35vw, 28rem);
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.08);
-  line-height: 1;
-  pointer-events: none;
-  z-index: 1;
-  user-select: none;
+#modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  display: block;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
